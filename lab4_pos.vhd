@@ -1,10 +1,6 @@
---NOTE: You need to update the header and rename the entity and architecture names
-
--- Author: Dr. David Foster
--- Last Modified: 8/11/2020
--- Purpose: use the DE10-Lite 7-segment LED displays
-
-
+-- Author: Max Dreher 
+-- Last Modified: 5/11/2021
+-- Purpose: use the DE10-Lite 7-segment LED displays and demonstrate canonical sum of products 
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
@@ -15,9 +11,9 @@ ENTITY lab4_pos IS
 		 );
 END lab4_pos;
 
-ARCHITECTURE temp OF lab4_pos IS
+ARCHITECTURE can_pos OF lab4_pos IS
 
-   COMPONENT hex_to_7seg  -- update the name
+   COMPONENT hex_to_7seg
 	   PORT( S	  :IN	   STD_LOGIC_VECTOR(3 DOWNTO 0);
             HEX  :OUT   STD_LOGIC_VECTOR(6 DOWNTO 0)
 		);
@@ -25,4 +21,4 @@ ARCHITECTURE temp OF lab4_pos IS
  
 BEGIN
    U0 : hex_to_7seg port map (SW(9 DOWNTO 6), HEX5);
-END temp;
+END can_pos;
