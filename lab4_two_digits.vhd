@@ -16,13 +16,20 @@ END lab4_two_digits;
 
 ARCHITECTURE two_dig OF lab4_two_digits IS
 
-   COMPONENT hex_to_7seg
+   COMPONENT hex_to_7seg_sop
 	   PORT( S	  :IN	   STD_LOGIC_VECTOR(3 DOWNTO 0);
             HEX  :OUT   STD_LOGIC_VECTOR(6 DOWNTO 0)
 		);
    END COMPONENT;
+	
+	COMPONENT hex_to_7seg_pos
+	   PORT( S	  :IN	   STD_LOGIC_VECTOR(3 DOWNTO 0);
+            HEX  :OUT   STD_LOGIC_VECTOR(6 DOWNTO 0)
+		);
+   END COMPONENT;
+	
  
 BEGIN
-   U0 : hex_to_7seg port map (SW(9 DOWNTO 6), HEX5);
-	U1 : hex_to_7seg port map (SW(3 DOWNTO 0), HEX4);
+   U0 : hex_to_7seg_sop port map (SW(9 DOWNTO 6), HEX5);
+	U1 : hex_to_7seg_pos port map (SW(3 DOWNTO 0), HEX4);
 END two_dig;
