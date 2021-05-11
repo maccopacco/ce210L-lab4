@@ -1,16 +1,15 @@
--- Add a useful header
--- Change names of the file, entity, and architecture
+-- Writes to hex light with POS
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY hex_to_7seg IS
+ENTITY hex_to_7seg_pos IS
    PORT( S   :IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
          HEX :OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END ENTITY;
 
-ARCHITECTURE CANONICAL_SOP of hex_to_7seg IS
+ARCHITECTURE CANONICAL_POS of hex_to_7pos IS
 
    ALIAS S3 : STD_LOGIC is S(3);
    ALIAS S2 : STD_LOGIC is S(2);
@@ -32,4 +31,4 @@ BEGIN
    e <= not( (S3 OR NOT(S0)) AND (S2 OR S1 OR NOT(S0)) AND (S3 OR NOT(S2) OR S1) );
    f <= not( (S3 OR S2 OR NOT(S0)) AND (S3 OR S2 OR NOT(S1)) AND (S3 OR NOT(S1) OR NOT(S0)) AND (NOT(S3) OR NOT(S2) OR S1 OR NOT(S0))  );
    g <= not( (S3 OR S2 OR S1) AND (S3 OR NOT(S2) OR NOT(S1) OR NOT(S0)) AND (NOT(S3) OR NOT(S2) OR S1 OR S0)  );
-END CANONICAL_SOP;
+END CANONICAL_POS;
