@@ -1,16 +1,15 @@
--- Add a useful header
--- Change names of the file, entity, and architecture
+-- Writes to hex light with SOP
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY hex_to_7seg IS
+ENTITY hex_to_7seg_sop IS
    PORT( S   :IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
          HEX :OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END ENTITY;
 
-ARCHITECTURE CANONICAL_SOP of hex_to_7seg IS
+ARCHITECTURE CANONICAL_SOP of hex_to_7seg_sop IS
 
    ALIAS S3 : STD_LOGIC is S(3);
    ALIAS S2 : STD_LOGIC is S(2);
