@@ -1,0 +1,14 @@
+Procedure 2 - Question 2 Update header
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Tue May 11 13:58:28 2021 -0400
+#
+# On branch p2q2
+# Changes to be committed:
+#	modified:   db/lab4_pos.db_info
+#	deleted:    db/lab4_pos.tmw_info
+#	modified:   lab4_pos.qws
+#	modified:   lab4_pos.vhd
+#
