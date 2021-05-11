@@ -25,11 +25,11 @@ ARCHITECTURE CANONICAL_SOP of hex_to_7seg IS
    ALIAS g : STD_LOGIC is HEX(6);   
 
 BEGIN
-   a <=   not( (S3 AND NOT(S2) AND NOT(S1)) OR (S3 AND NOT(S0)) OR ( NOT(S3) AND S2 AND S0) OR ( NOT(S3) AND S1) OR (S2 AND S3) OR ( NOT(S2) AND NOT(S0)) ); -- put your equations inside the not() operations
-   b <= not( (S3 AND NOT(S1) AND S0) OR (NOT(S3) AND NOT(S2)) OR (NOT(S3) AND S1 AND S0) OR (NOT(S3) AND NOT(S1) AND NOT(S0)) OR (NOT(S2) AND NOT(S0)) OR ( NOT(S2) AND NOT(S1)) );
-   c <= not( (S3 AND NOT(S2)) OR ( NOT(S3) AND S2) OR (NOT(S2) AND NOT(S1)) OR (NOT(S2) AND S0) OR (NOT(S1) AND S0) );
-   d <= not( (NOT(S3) AND NOT(S2) AND S1) OR (NOT(S2) AND S1 AND S0) OR (S3 AND NOT(S1)) OR (S2 AND S1 AND NOT(S0)) OR (NOT(S2) AND NOT(S1) AND NOT(S0)) OR (S2 AND NOT(S1) AND S0) );
-   e <= not( (NOT(S2) AND NOT(S0)) OR (S1 AND NOT(S0)) OR (S3 AND S1) OR (S3 AND S2) );
-   f <= not( (NOT(S1) AND NOT(S0)) OR (S2 AND NOT(S0)) OR (S3 AND NOT(S2)) OR (S3 AND S1) OR (NOT(S3) AND S2 AND NOT(S1)) );
-   g <= not( (NOT(S2) AND S1) OR (S1 AND NOT(S0)) OR (S3 AND NOT(S2)) OR (S3 AND S0) OR (NOT(S3) AND S2 AND NOT(S1)));
+   a <= not(  ); -- put your equations inside the not() operations
+   b <= not(  );
+   c <= not(  );
+   d <= not(  );
+   e <= not(  );
+   f <= not(  );
+   g <= not(  );
 END CANONICAL_SOP;

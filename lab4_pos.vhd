@@ -9,13 +9,13 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY lab4_sop IS
+ENTITY lab4_pos IS
    PORT( SW	    :IN  STD_LOGIC_VECTOR(9 DOWNTO 6);
          HEX5   :OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
 		 );
-END lab4_sop;
+END lab4_pos;
 
-ARCHITECTURE temp OF lab4_sop IS
+ARCHITECTURE temp OF lab4_pos IS
 
    COMPONENT hex_to_7seg  -- update the name
 	   PORT( S	  :IN	   STD_LOGIC_VECTOR(3 DOWNTO 0);
